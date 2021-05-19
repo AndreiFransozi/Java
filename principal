@@ -1,0 +1,25 @@
+public class Principal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //tipo variavel = valor
+        Acampamento acamp01 new Acampamento();
+        acamp01.setNome(Rodrigo);
+        acamp01.setIdade(9);
+        acamp01.separarGrupos();
+        acamp01.imprimirDados();
+       
+        Acampamento acamp02 = new Acampamento(); 
+        acamp01.setNome(Roberto);
+        acamp01.setIdade(10);
+        
+        acamp02.separarGrupos();
+        acamp02.imprimirDados();
+    
+        Acampamento acamp 03 = new Acampamento("Rejeane", 15);
+        Acampamento acamp 04 = new Acampamento("Marise", 21);
+    }
+    
+}
