@@ -1,0 +1,21 @@
+package tipos;
+public class Tipos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        byte a = 127;
+        short b = 32765;
+        int c = 23;
+        long d = 70000;
+                
+        float e = 4000;
+        double f = 3000;
+                
+        boolean g = true;
+        char h = 's';
+        
+    }
+    
+}
