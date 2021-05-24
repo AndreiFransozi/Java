@@ -1,0 +1,25 @@
+package baskhara;
+import javax.swing.JOptionPane;
+public class Baskhara {
+    public static void main(String[] args) {
+        String valorA = JOptionPane.showInputDialog(null, "Insira o Valor de A: ", "Valor A", 1);
+        int A = Integer.parseInt(valorA);
+        String valorB = JOptionPane.showInputDialog(null, "Insira o Valor de B: ", "Valor B", 1);
+        int B = Integer.parseInt(valorB);
+        String valorC = JOptionPane.showInputDialog(null, "Insira o Valor de C: ", "Valor C", 1);
+        int C = Integer.parseInt(valorC);
+        
+        double raiz1 = B * B;
+        double raiz2 = -4 * A * C;
+        double raiz3 = raiz1 + raiz2;
+        double raizFinal = Math.sqrt(raiz3);
+        
+        double sobre = 2 * A;
+        double antesRaiz = B * -1;
+        double valorX = antesRaiz + raizFinal / sobre;
+        double valorY = antesRaiz - raizFinal / sobre;
+    
+    JOptionPane.showMessageDialog(null,"x =" + valorX);
+    JOptionPane.showMessageDialog(null,"y =" + valorY);
+            }
+}
