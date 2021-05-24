@@ -1,0 +1,130 @@
+package exe301;
+
+import java.util.Scanner;
+
+public class Exe301
+{
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args)
+    {
+        int dia, mes;
+        Scanner in = new Scanner(System.in);
+        boolean erro;
+        //Enquanto não digitar um mês válido
+        do
+        {
+            System.out.print("Digite seu mês de aniversário: ");
+            mes = in.nextInt();
+        } while (mes < 1 || mes > 12);
+
+        //Enquanto não digitar um dia válido e erro=true
+        do
+        {
+            System.out.print("Digite seu dia de aniversário: ");
+            dia = in.nextInt();   
+
+            //Se Fevereiro, então devo ter no máximo 28 dias 
+            //Obs: não trato anos bissextos 
+            if (mes == 2 && dia > 28 )
+                erro = true;
+
+            //Se Abril, Junho, Setembro, Novembro, então devo ter no máximo 30 dias
+            else if ( (mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30)
+                erro = true;
+
+            else erro = false;
+
+        } while (dia < 1 || dia > 31 || erro);
+
+        switch (mes)
+        {
+            case 1:
+            {
+                if (dia <= 20)
+                     System.out.print("Capricórnio");
+                else System.out.print("Aquário");
+            };break;
+
+            case 2:
+            {
+                if (dia <= 19)
+                     System.out.print("Aquário");
+                else System.out.print("Peixes");
+            };break;
+
+            case 3:
+            {
+                if (dia <= 20)
+                     System.out.print("Peixes");
+                else System.out.print("Áries");
+            };break;
+
+            case 4:
+            {
+                if (dia <= 20)
+                     System.out.print("Áries");
+                else System.out.print("Touro");
+            };break;
+
+            case 5:
+            {
+                if (dia <= 20)
+                     System.out.print("Touro");
+                else System.out.print("Gêmeos");
+            };break;
+
+            case 6:
+            {
+                if (dia <= 20)
+                     System.out.print("Gêmeos");
+                else System.out.print("Câncer");
+            };break;
+
+            case 7:
+            {
+                if (dia <= 21)
+                     System.out.print("Câncer");
+                else System.out.print("Leão");
+            };break;
+
+            case 8:
+            {
+                if (dia <= 22)
+                     System.out.print("Leão");
+                else System.out.print("Virgem");
+            };break;
+
+            case 9:
+            {
+                if (dia <= 22)
+                     System.out.print("Virgem");
+                else System.out.print("Libra");
+            };break;
+
+            case 10:
+            {
+                if (dia <= 22)
+                     System.out.print("Libra");
+                else System.out.print("Escorpião");
+            };break;
+
+            case 11:
+            {
+                if (dia <= 21 )
+                     System.out.print("Escorpião");
+                else System.out.print("Sagitário");
+            };break;
+
+            case 12:
+            {
+                if (dia <= 21)
+                     System.out.print("Sagitário");
+                else System.out.print("Capricórnio");
+            };break;
+
+            default: System.out.print("Informações incorretas!");
+        }
+    }
+}
